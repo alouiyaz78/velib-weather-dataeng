@@ -1,26 +1,26 @@
-#  API Vélib - Vélos et bornes - Disponibilité temps réel
+# Vélib API - Bikes and stations - Real-time availability
 
-On se limitera uniquement aux stations situées à Paris. Les données sont actualisés chaque minute.
-La limite de 100 résultats est imposée par l'API, il faudra faire plusieurs requêtes pour récupérer les données de toutes les stations, avec une pagination basée sur le paramètre `offset`.
+We will restrict ourselves to stations located in Paris only. The data is refreshed every minute.
+The API imposes a limit of 100 results per request, so multiple requests are needed to retrieve data for all stations, using pagination based on the `offset` parameter.
 
-URL : `https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/velib-disponibilite-en-temps-reel/records?order_by=capacity%20DESC&limit=100&offset=0&refine=nom_arrondissement_communes%3A%22Paris%22&timezone=Europe%2FParis`
+URL: `https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/velib-disponibilite-en-temps-reel/records?order_by=capacity%20DESC&limit=100&offset=0&refine=nom_arrondissement_communes%3A%22Paris%22&timezone=Europe%2FParis`
 
-- `stationcode` : code de la station
-- `name` : nom de la station
-- `is_installed` : station installée ou non
-- `capacity` : nombre total de bornes de la station
-- `numdocksavailable` : nombre de bornes disponibles pour attacher un vélo
-- `numbikesavailable` : nombre de vélos disponibles à la location
-- `mechanical` : nombre de vélos mécaniques disponibles
-- `ebike` : nombre de vélos électriques disponibles
-- `is_renting` : variable binaire indiquant si la station peut louer des vélos (is_renting=1 si le statut de la station est Operative)
-- `is_returning` : variable binaire indiquant si la station peut recevoir des vélos (is_renting=1 si le statut de la station est Operative)
-- `duedate` : date de la dernière mise à jour des données
-- `lon` et `lat` : coordonnées géographiques de la station
-- `nom_arrondissement_communes` : nom de la commune ou arrondissement où se situe la station
-- `code_insee_commune` : code INSEE de la commune où se situe la station
+- `stationcode`: station code
+- `name`: station name
+- `is_installed`: whether the station is installed or not
+- `capacity`: total number of docks at the station
+- `numdocksavailable`: number of docks available to return a bike
+- `numbikesavailable`: number of bikes available for rental
+- `mechanical`: number of mechanical bikes available
+- `ebike`: number of electric bikes available
+- `is_renting`: binary flag indicating whether the station can rent out bikes (is_renting=1 if the station status is Operative)
+- `is_returning`: binary flag indicating whether the station can accept returned bikes (is_renting=1 if the station status is Operative)
+- `duedate`: timestamp of the last data update
+- `lon` and `lat`: geographic coordinates of the station
+- `nom_arrondissement_communes`: name of the municipality or district (arrondissement) where the station is located
+- `code_insee_commune`: INSEE code of the municipality where the station is located
 
-## Réponse 
+## Response
 
 ```json
 {

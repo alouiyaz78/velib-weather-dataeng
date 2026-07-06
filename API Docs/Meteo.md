@@ -1,23 +1,23 @@
-# API météo
+# Weather API
 
-On récupère la météo de Paris en temps réel via l'API Open-Meteo. Les données sont actualisées tous les quarts d'heure. 
+We retrieve real-time weather data for Paris via the Open-Meteo API. The data is refreshed every 15 minutes.
 
-URL : `https://api.open-meteo.com/v1/forecast?latitude=48.8534&longitude=2.3488&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover,wind_speed_10m&timezone=Europe%2FParis&forecast_days=1`
+URL: `https://api.open-meteo.com/v1/forecast?latitude=48.8534&longitude=2.3488&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover,wind_speed_10m&timezone=Europe%2FParis&forecast_days=1`
 
-- `time` : horodatage de la mesure
-- `interval` : données rafraîchies toutes les 15 min
-- `temperature_2m` : température à 2m du sol
-- `apparent_temperature` : ressenti (wind chill + humidité)
-- `relative_humidity_2m` : humidité relative à 2m
-- `is_day` : 1 = journée, 0 = nuit
-- `precipitation` : précipitations totales (15 min écoulées)
-- `rain` : part pluie
-- `showers` : part averses
-- `snowfall` : part neige
-- `cloud_cover` : couverture nuageuse totale
-- `wind_speed_10m` : vitesse du vent à 10m
+- `time`: timestamp of the measurement
+- `interval`: data refreshed every 15 min
+- `temperature_2m`: temperature at 2m above ground
+- `apparent_temperature`: "feels like" temperature (wind chill + humidity)
+- `relative_humidity_2m`: relative humidity at 2m
+- `is_day`: 1 = daytime, 0 = nighttime
+- `precipitation`: total precipitation (over the past 15 min)
+- `rain`: rain share
+- `showers`: showers share
+- `snowfall`: snowfall share
+- `cloud_cover`: total cloud cover
+- `wind_speed_10m`: wind speed at 10m
 
-## Réponse 
+## Response
 
 ```json
 {

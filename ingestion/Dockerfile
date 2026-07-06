@@ -22,3 +22,4 @@ COPY . .
 RUN uv sync --frozen --no-dev
 
 # On lance le fichier main.py
+cmd ["uv", "run", "main.py"]

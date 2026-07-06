@@ -38,7 +38,12 @@ class VelibFetcher:
     ) -> psycopg2.extensions.connection:
         for attempt in range(1, attempts + 1):
             try:
-                conn = ...
+                conn = psycopg2.connect(host= settings.postgres_host,
+                                        port = settings.postgres_port,
+                                        user = settings.postgres_user,
+                                        password = settings.postgres_password,
+                                        dbname = settings.postgres_db
+                                        )
                 logger.info("Connexion PostgreSQL établie (tentative %d)", attempt)
                 return conn
             except psycopg2.OperationalError as exc:
@@ -119,29 +124,30 @@ class VelibFetcher:
 
     def _insert_stations(self, stations: list[dict]) -> int:
         """Insère les stations dans bronze.velib_stations, retourne le nombre de lignes insérées."""
-        ...
+        conn = self._get_conn()
         inserted = 0
         with conn.cursor() as cur:
             for station in stations:
                 cur.execute(
                     """
-                    ... (
+                    INSERT INTO bronze.velib_stations (
                         stationcode, name, is_installed, capacity,
                         numdocksavailable, numbikesavailable, mechanical, ebike,
                         is_renting, is_returning, duedate, lon, lat,
                         nom_arrondissement_communes, code_insee_commune
-                    ) ... (
+                    ) VALUES 
+                    (
                         %(stationcode)s, %(name)s, %(is_installed)s, %(capacity)s,
                         %(numdocksavailable)s, %(numbikesavailable)s, %(mechanical)s, %(ebike)s,
                         %(is_renting)s, %(is_returning)s, %(duedate)s, %(lon)s, %(lat)s,
                         %(nom_arrondissement_communes)s, %(code_insee_commune)s
                     )
                     
-                    ...
+                    ON CONFLICT ON CONSTRAINT uq_velib_station_update DO NOTHING
                     
                     """,
                     station,
                 )
                 inserted += cur.rowcount
-        ...
+        conn.commit()
         return inserted
