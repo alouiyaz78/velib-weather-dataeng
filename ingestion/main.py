@@ -2,6 +2,7 @@ import logging
 import signal
 import sys
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 from apscheduler.schedulers.blocking import BlockingScheduler
 
@@ -15,3 +16,47 @@ logging.basicConfig(
     datefmt="%Y-%m-%dT%H:%M:%S",
 )
 logger = logging.getLogger(__name__)
+
+
+def main():
+    velib_fetcher = VelibFetcher()
+    meteo_fetcher = MeteoFetcher()
+    scheduler = BlockingScheduler(timezone="Europe/Paris")
+
+    scheduler.add_job(
+        velib_fetcher.run,
+        trigger="interval",
+        minutes=settings.fetch_interval_minutes,
+        next_run_time=datetime.now(ZoneInfo("Europe/Paris")),
+        id="velib_fetcher",
+        name="velib fetcher",
+        max_instances=1,
+        misfire_grace_time=60,
+    )
+    scheduler.add_job(
+        meteo_fetcher.run,
+        trigger="interval",
+        minutes=settings.fetch_interval_minutes,
+        next_run_time=datetime.now(ZoneInfo("Europe/Paris")),
+        id="meteo_fetcher",
+        name="meteo fetcher",
+        max_instances=1,
+        misfire_grace_time=60,
+    )
+
+    def _shutdown(signum: int, _frame: object):
+        logger.info("Signal reçu, arrêt en cours...")
+        scheduler.shutdown(wait=False)
+        sys.exit(0)
+
+    signal.signal(signal.SIGTERM, _shutdown)
+    signal.signal(signal.SIGINT, _shutdown)
+
+    try:
+        scheduler.start()
+    except (KeyboardInterrupt, SystemExit):
+        logger.info("Arrêt du scheduler...")
+
+
+if __name__ == "__main__":
+    main()
