@@ -5,7 +5,7 @@ Flux :
   API Open-Meteo -> extraction objet "current" -> PostgreSQL bronze
 
 L'API rafraîchit les données toutes les 15 minutes.
-La déduplication est gérée par la contrainte uq_meteo_measured_at (measured_at).
+La déduplication est gérée par la contrainte uq_meteo_mesured_at (mesured_at).
 Si on collecte toutes les 10 min, une mesure sur deux sera un doublon ignoré silencieusement.
 """
 
@@ -38,12 +38,13 @@ class MeteoFetcher:
     ) -> psycopg2.extensions.connection:
         for attempt in range(1, attempts + 1):
             try:
-                conn = psycopg2.connect(host= settings.postgres_host,
-                                        port = settings.postgres_port,
-                                        user = settings.postgres_user,
-                                        password = settings.postgres_password,
-                                        dbname = settings.postgres_db
-                                        )
+                conn = psycopg2.connect(
+                    host=settings.postgres_host,
+                    port=settings.postgres_port,
+                    user=settings.postgres_user,
+                    password=settings.postgres_password,
+                    dbname=settings.postgres_db,
+                )
                 logger.info("Connexion PostgreSQL établie (tentative %d)", attempt)
                 return conn
             except psycopg2.OperationalError as exc:
@@ -108,10 +109,11 @@ class MeteoFetcher:
         """Insère une mesure météo, retourne True si insérée (False si doublon)."""
         conn = self._get_conn()
         with conn.cursor() as cur:
-            cur.execute("""
+            cur.execute(
+                """
                 INSERT INTO bronze.meteo_paris
                 (
-                    measured_at, temperature_2m, relative_humidity_2m,
+                    mesured_at, temperature_2m, relative_humidity_2m,
                     apparent_temperature, is_day, precipitation,
                     rain, showers, snowfall, cloud_cover, wind_speed_10m
                 )
@@ -121,9 +123,7 @@ class MeteoFetcher:
                     %(apparent_temperature)s, %(is_day)s, %(precipitation)s,
                     %(rain)s, %(showers)s, %(snowfall)s, %(cloud_cover)s, %(wind_speed_10m)s
                 )
-                
-                ON CONFLICT ON CONSTRAINT uq_meteo_measured_at DO NOTHING
-                
+                ON CONFLICT ON CONSTRAINT uq_meteo_mesured_at DO NOTHING
                 """,
                 weather,
             )
