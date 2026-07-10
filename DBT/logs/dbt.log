@@ -1,0 +1,250 @@
+[0m20:54:07.300580 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e4f4cb79010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e4f4a36fda0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e4f4a36fb90>]}
+
+
+============================== 20:54:07.306874 | f8eada8f-16ca-45ba-a8dd-a3327e611ab3 ==============================
+[0m20:54:07.306874 [info ] [MainThread]: Running with dbt=1.11.12
+[0m20:54:07.307838 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'invocation_command': 'dbt debug', 'partial_parse': 'True', 'warn_error': 'None', 'target_path': 'None', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'printer_width': '80', 'debug': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'use_experimental_parser': 'False', 'log_path': '/home/alouiyaz/Projet_velib/DBT/logs', 'use_colors': 'True', 'indirect_selection': 'eager', 'introspect': 'True', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'static_parser': 'True', 'profiles_dir': '/home/alouiyaz/Projet_velib/DBT', 'write_json': 'True'}
+[0m20:54:07.324532 [info ] [MainThread]: dbt version: 1.11.12
+[0m20:54:07.325398 [info ] [MainThread]: python version: 3.12.3
+[0m20:54:07.326220 [info ] [MainThread]: python path: /home/alouiyaz/Projet_velib/DBT/.venv/bin/python3
+[0m20:54:07.326958 [info ] [MainThread]: os info: Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m20:54:07.343181 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'POSTGRES_HOST'
+[0m20:54:07.345477 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.15773334, "process_in_blocks": "32", "process_kernel_time": 0.421352, "process_mem_max_rss": "100416", "process_out_blocks": "32", "process_user_time": 2.629398}
+[0m20:54:07.346700 [debug] [MainThread]: Command `dbt debug` failed at 20:54:07.346452 after 0.16 seconds
+[0m20:54:07.347813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e4f4af13290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e4f49f9ff80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e4f49f9f5c0>]}
+[0m20:54:07.349707 [debug] [MainThread]: Flushing usage events
+[0m20:54:08.235384 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:55:34.229298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7857e777f2c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7857e92fe3f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7857e8372a50>]}
+
+
+============================== 20:55:34.236604 | ff8d3b6a-6600-40b1-9399-df8b96c9a384 ==============================
+[0m20:55:34.236604 [info ] [MainThread]: Running with dbt=1.11.12
+[0m20:55:34.238578 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'empty': 'None', 'use_experimental_parser': 'False', 'version_check': 'True', 'partial_parse': 'True', 'introspect': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'no_print': 'None', 'log_path': '/home/alouiyaz/Projet_velib/DBT/logs', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_cache_events': 'False', 'quiet': 'False', 'debug': 'False', 'fail_fast': 'False', 'write_json': 'True', 'printer_width': '80', 'profiles_dir': '/home/alouiyaz/Projet_velib/DBT'}
+[0m20:55:34.257687 [info ] [MainThread]: dbt version: 1.11.12
+[0m20:55:34.258611 [info ] [MainThread]: python version: 3.12.3
+[0m20:55:34.259527 [info ] [MainThread]: python path: /home/alouiyaz/Projet_velib/DBT/.venv/bin/python3
+[0m20:55:34.260351 [info ] [MainThread]: os info: Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m20:55:34.442637 [info ] [MainThread]: Using profiles dir at /home/alouiyaz/Projet_velib/DBT
+[0m20:55:34.443794 [info ] [MainThread]: Using profiles.yml file at /home/alouiyaz/Projet_velib/DBT/profiles.yml
+[0m20:55:34.444619 [info ] [MainThread]: Using dbt_project.yml file at /home/alouiyaz/Projet_velib/DBT/dbt_project.yml
+[0m20:55:34.446540 [info ] [MainThread]: adapter type: postgres
+[0m20:55:34.447317 [info ] [MainThread]: adapter version: 1.9.0
+[0m20:55:34.657296 [info ] [MainThread]: Configuration:
+[0m20:55:34.658187 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:55:34.658893 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:55:34.659579 [info ] [MainThread]: Required dependencies:
+[0m20:55:34.660292 [debug] [MainThread]: Executing "git --help"
+[0m20:55:34.664326 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:55:34.665268 [debug] [MainThread]: STDERR: "b''"
+[0m20:55:34.666109 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:55:34.667103 [info ] [MainThread]: Connection:
+[0m20:55:34.668099 [info ] [MainThread]:   host: postgres
+[0m20:55:34.668928 [info ] [MainThread]:   port: 5432
+[0m20:55:34.669891 [info ] [MainThread]:   user: velib
+[0m20:55:34.670515 [info ] [MainThread]:   database: velib_db
+[0m20:55:34.671120 [info ] [MainThread]:   schema: silver
+[0m20:55:34.671918 [info ] [MainThread]:   connect_timeout: 10
+[0m20:55:34.672759 [info ] [MainThread]:   role: None
+[0m20:55:34.673725 [info ] [MainThread]:   search_path: None
+[0m20:55:34.674406 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:55:34.675030 [info ] [MainThread]:   sslmode: None
+[0m20:55:34.675648 [info ] [MainThread]:   sslcert: None
+[0m20:55:34.676316 [info ] [MainThread]:   sslkey: None
+[0m20:55:34.676929 [info ] [MainThread]:   sslrootcert: None
+[0m20:55:34.677694 [info ] [MainThread]:   application_name: dbt
+[0m20:55:34.678453 [info ] [MainThread]:   retries: 1
+[0m20:55:34.679282 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:55:34.879801 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:55:34.960013 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:55:34.960697 [debug] [MainThread]: On debug: select 1 as id
+[0m20:55:34.961245 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:55:36.025729 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "postgres" to address: Name or service not known
+
+[0m20:55:37.041658 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m20:55:37.042547 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m20:55:37.043345 [debug] [MainThread]: On debug: No close available on handle
+[0m20:55:37.044004 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m20:55:37.044863 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:55:37.045638 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "postgres" to address: Name or service not known
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m20:55:37.047518 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 2.9518845, "process_in_blocks": "25168", "process_kernel_time": 0.510972, "process_mem_max_rss": "114908", "process_out_blocks": "600", "process_user_time": 3.484268}
+[0m20:55:37.048580 [debug] [MainThread]: Command `dbt debug` failed at 20:55:37.048359 after 2.95 seconds
+[0m20:55:37.049801 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:55:37.050508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7857e7ffca10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7857e7ce0bc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7857e8271010>]}
+[0m20:55:37.051555 [debug] [MainThread]: Flushing usage events
+[0m20:55:37.478956 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:57:22.189411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b590178d2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b5900d90e00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b5901241cd0>]}
+
+
+============================== 20:57:22.194614 | 36f25802-5513-4a98-8a92-25439c4ab82d ==============================
+[0m20:57:22.194614 [info ] [MainThread]: Running with dbt=1.11.12
+[0m20:57:22.196167 [debug] [MainThread]: running dbt with arguments {'log_path': '/home/alouiyaz/Projet_velib/DBT/logs', 'cache_selected_only': 'False', 'quiet': 'False', 'target_path': 'None', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'introspect': 'True', 'fail_fast': 'False', 'static_parser': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'partial_parse': 'True', 'version_check': 'True', 'indirect_selection': 'eager', 'write_json': 'True', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'use_colors': 'True', 'profiles_dir': '/home/alouiyaz/Projet_velib/DBT', 'no_print': 'None', 'invocation_command': 'dbt debug', 'warn_error': 'None'}
+[0m20:57:22.209089 [info ] [MainThread]: dbt version: 1.11.12
+[0m20:57:22.209818 [info ] [MainThread]: python version: 3.12.3
+[0m20:57:22.210881 [info ] [MainThread]: python path: /home/alouiyaz/Projet_velib/DBT/.venv/bin/python3
+[0m20:57:22.211523 [info ] [MainThread]: os info: Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m20:57:22.332195 [info ] [MainThread]: Using profiles dir at /home/alouiyaz/Projet_velib/DBT
+[0m20:57:22.333049 [info ] [MainThread]: Using profiles.yml file at /home/alouiyaz/Projet_velib/DBT/profiles.yml
+[0m20:57:22.333766 [info ] [MainThread]: Using dbt_project.yml file at /home/alouiyaz/Projet_velib/DBT/dbt_project.yml
+[0m20:57:22.334772 [info ] [MainThread]: adapter type: postgres
+[0m20:57:22.335452 [info ] [MainThread]: adapter version: 1.9.0
+[0m20:57:22.593836 [info ] [MainThread]: Configuration:
+[0m20:57:22.595012 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:57:22.596675 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:57:22.597544 [info ] [MainThread]: Required dependencies:
+[0m20:57:22.598195 [debug] [MainThread]: Executing "git --help"
+[0m20:57:22.601422 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:57:22.602214 [debug] [MainThread]: STDERR: "b''"
+[0m20:57:22.602875 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:57:22.603979 [info ] [MainThread]: Connection:
+[0m20:57:22.605075 [info ] [MainThread]:   host: localhost
+[0m20:57:22.605782 [info ] [MainThread]:   port: 5432
+[0m20:57:22.606356 [info ] [MainThread]:   user: velib
+[0m20:57:22.606914 [info ] [MainThread]:   database: velib_db
+[0m20:57:22.607474 [info ] [MainThread]:   schema: silver
+[0m20:57:22.608051 [info ] [MainThread]:   connect_timeout: 10
+[0m20:57:22.608685 [info ] [MainThread]:   role: None
+[0m20:57:22.609300 [info ] [MainThread]:   search_path: None
+[0m20:57:22.609923 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:57:22.611013 [info ] [MainThread]:   sslmode: None
+[0m20:57:22.612311 [info ] [MainThread]:   sslcert: None
+[0m20:57:22.613693 [info ] [MainThread]:   sslkey: None
+[0m20:57:22.614863 [info ] [MainThread]:   sslrootcert: None
+[0m20:57:22.615704 [info ] [MainThread]:   application_name: dbt
+[0m20:57:22.617142 [info ] [MainThread]:   retries: 1
+[0m20:57:22.618428 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:57:22.773010 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:57:22.823312 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:57:22.824090 [debug] [MainThread]: On debug: select 1 as id
+[0m20:57:22.825081 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:57:22.830254 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+[0m20:57:22.831548 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m20:57:22.832112 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m20:57:22.832662 [debug] [MainThread]: On debug: No close available on handle
+[0m20:57:22.833218 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m20:57:22.833873 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:57:22.834521 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+  	Is the server running on that host and accepting TCP/IP connections?
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m20:57:22.835882 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.7562099, "process_in_blocks": "40", "process_kernel_time": 0.387505, "process_mem_max_rss": "113300", "process_out_blocks": "24", "process_user_time": 3.035459}
+[0m20:57:22.836629 [debug] [MainThread]: Command `dbt debug` failed at 20:57:22.836480 after 0.76 seconds
+[0m20:57:22.837243 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:57:22.837852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b59001f0260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b5901242630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b590121bb30>]}
+[0m20:57:22.838543 [debug] [MainThread]: Flushing usage events
+[0m20:57:23.334450 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:58:59.198630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x724076bc0fb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7240764e10a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7240766515b0>]}
+
+
+============================== 20:58:59.204217 | b25cf639-a4c2-4581-be0e-dac0751b54a4 ==============================
+[0m20:58:59.204217 [info ] [MainThread]: Running with dbt=1.11.12
+[0m20:58:59.205538 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'profiles_dir': '/home/alouiyaz/Projet_velib/DBT', 'use_colors': 'True', 'no_print': 'None', 'version_check': 'True', 'log_cache_events': 'False', 'printer_width': '80', 'introspect': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'log_path': '/home/alouiyaz/Projet_velib/DBT/logs', 'empty': 'None', 'debug': 'False', 'use_experimental_parser': 'False', 'write_json': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'quiet': 'False', 'invocation_command': 'dbt debug', 'partial_parse': 'True'}
+[0m20:58:59.221320 [info ] [MainThread]: dbt version: 1.11.12
+[0m20:58:59.222209 [info ] [MainThread]: python version: 3.12.3
+[0m20:58:59.223659 [info ] [MainThread]: python path: /home/alouiyaz/Projet_velib/DBT/.venv/bin/python3
+[0m20:58:59.225397 [info ] [MainThread]: os info: Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m20:58:59.325527 [info ] [MainThread]: Using profiles dir at /home/alouiyaz/Projet_velib/DBT
+[0m20:58:59.326489 [info ] [MainThread]: Using profiles.yml file at /home/alouiyaz/Projet_velib/DBT/profiles.yml
+[0m20:58:59.327227 [info ] [MainThread]: Using dbt_project.yml file at /home/alouiyaz/Projet_velib/DBT/dbt_project.yml
+[0m20:58:59.328190 [info ] [MainThread]: adapter type: postgres
+[0m20:58:59.328898 [info ] [MainThread]: adapter version: 1.9.0
+[0m20:58:59.529314 [info ] [MainThread]: Configuration:
+[0m20:58:59.530170 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:58:59.531168 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:58:59.531828 [info ] [MainThread]: Required dependencies:
+[0m20:58:59.532490 [debug] [MainThread]: Executing "git --help"
+[0m20:58:59.535802 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:58:59.536627 [debug] [MainThread]: STDERR: "b''"
+[0m20:58:59.537215 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:58:59.537927 [info ] [MainThread]: Connection:
+[0m20:58:59.538957 [info ] [MainThread]:   host: localhost
+[0m20:58:59.539819 [info ] [MainThread]:   port: 5432
+[0m20:58:59.541060 [info ] [MainThread]:   user: velib
+[0m20:58:59.542365 [info ] [MainThread]:   database: velib_db
+[0m20:58:59.543819 [info ] [MainThread]:   schema: silver
+[0m20:58:59.544637 [info ] [MainThread]:   connect_timeout: 10
+[0m20:58:59.546043 [info ] [MainThread]:   role: None
+[0m20:58:59.547330 [info ] [MainThread]:   search_path: None
+[0m20:58:59.548427 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:58:59.549400 [info ] [MainThread]:   sslmode: None
+[0m20:58:59.550944 [info ] [MainThread]:   sslcert: None
+[0m20:58:59.552091 [info ] [MainThread]:   sslkey: None
+[0m20:58:59.553168 [info ] [MainThread]:   sslrootcert: None
+[0m20:58:59.554401 [info ] [MainThread]:   application_name: dbt
+[0m20:58:59.556196 [info ] [MainThread]:   retries: 1
+[0m20:58:59.559723 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:58:59.709627 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:58:59.772405 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:58:59.773723 [debug] [MainThread]: On debug: select 1 as id
+[0m20:58:59.775053 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:58:59.801692 [debug] [MainThread]: SQL status: SELECT 1 in 0.027 seconds
+[0m20:58:59.803474 [debug] [MainThread]: On debug: Close
+[0m20:58:59.804240 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:58:59.805225 [info ] [MainThread]: [32mAll checks passed![0m
+[0m20:58:59.807287 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.7312891, "process_in_blocks": "0", "process_kernel_time": 0.59309, "process_mem_max_rss": "116172", "process_out_blocks": "24", "process_user_time": 3.706818}
+[0m20:58:59.808780 [debug] [MainThread]: Command `dbt debug` succeeded at 20:58:59.808486 after 0.73 seconds
+[0m20:58:59.810124 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:58:59.811129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72407826e570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x724076629940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x724075a38770>]}
+[0m20:58:59.812098 [debug] [MainThread]: Flushing usage events
+[0m20:59:00.267252 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:59:47.085226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7962acab3170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7962ae7891c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7962ad9822d0>]}
+
+
+============================== 20:59:47.090585 | 2a282faa-f6b2-4b1f-b811-077c86f1b927 ==============================
+[0m20:59:47.090585 [info ] [MainThread]: Running with dbt=1.11.12
+[0m20:59:47.091649 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'no_print': 'None', 'fail_fast': 'False', 'cache_selected_only': 'False', 'profiles_dir': '/home/alouiyaz/Projet_velib/DBT', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt source freshness', 'version_check': 'True', 'warn_error': 'None', 'static_parser': 'True', 'log_format': 'default', 'printer_width': '80', 'use_experimental_parser': 'False', 'introspect': 'True', 'target_path': 'None', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': '/home/alouiyaz/Projet_velib/DBT/logs', 'debug': 'False', 'log_cache_events': 'False', 'use_colors': 'True', 'indirect_selection': 'eager', 'empty': 'None', 'write_json': 'True'}
+[0m20:59:47.456081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2a282faa-f6b2-4b1f-b811-077c86f1b927', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7962abfd4560>]}
+[0m20:59:47.584341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2a282faa-f6b2-4b1f-b811-077c86f1b927', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7962ac95d1f0>]}
+[0m20:59:47.586054 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:59:47.747593 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m20:59:47.748947 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:59:47.749905 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2a282faa-f6b2-4b1f-b811-077c86f1b927', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7962ab716b40>]}
+[0m20:59:52.296108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2a282faa-f6b2-4b1f-b811-077c86f1b927', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7962a9ff01d0>]}
+[0m20:59:52.888932 [debug] [MainThread]: Wrote artifact WritableManifest to /home/alouiyaz/Projet_velib/DBT/target/manifest.json
+[0m20:59:52.898901 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/alouiyaz/Projet_velib/DBT/target/semantic_manifest.json
+[0m20:59:53.087419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2a282faa-f6b2-4b1f-b811-077c86f1b927', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7962a979a0f0>]}
+[0m20:59:53.089501 [info ] [MainThread]: Found 4 models, 18 data tests, 2 sources, 475 macros
+[0m20:59:53.093311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2a282faa-f6b2-4b1f-b811-077c86f1b927', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7962a97584a0>]}
+[0m20:59:53.105949 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m20:59:53.323176 [debug] [MainThread]: Wrote artifact WritableManifest to /home/alouiyaz/Projet_velib/DBT/target/manifest.json
+[0m20:59:53.330423 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/alouiyaz/Projet_velib/DBT/target/semantic_manifest.json
+[0m20:59:53.338391 [debug] [MainThread]: Wrote artifact FreshnessResult to /home/alouiyaz/Projet_velib/DBT/target/sources.json
+[0m20:59:53.340060 [info ] [MainThread]: Done.
+[0m20:59:53.344625 [debug] [MainThread]: Resource report: {"command_name": "freshness", "command_success": true, "command_wall_clock_time": 6.3963027, "process_in_blocks": "2664", "process_kernel_time": 0.94411, "process_mem_max_rss": "121752", "process_out_blocks": "3648", "process_user_time": 10.130713}
+[0m20:59:53.346172 [debug] [MainThread]: Command `dbt source freshness` succeeded at 20:59:53.345904 after 6.40 seconds
+[0m20:59:53.348877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7962ace65730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7962ace65760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7962aaf1e9c0>]}
+[0m20:59:53.351176 [debug] [MainThread]: Flushing usage events
+[0m20:59:53.898011 [debug] [MainThread]: An error was encountered while trying to flush usage events
