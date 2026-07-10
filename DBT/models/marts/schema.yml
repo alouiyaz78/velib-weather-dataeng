@@ -7,7 +7,7 @@ models:
       avec ses conditions météo appariées et ses features ML calculées.
       C'est la table lue par Streamlit et utilisée pour entraîner le RandomForest.
     columns:
-      - name: stationcode
+      - name: station_code
         description: "Identifiant de la station"
         tests:
           - not_null
@@ -37,11 +37,11 @@ models:
           - not_null
       - name: meteo_measured_at
         description: "Horodatage de la mesure météo appariée (heure locale Paris)"
-      - name: hour_of_day
+      - name: hours_of_day
         description: "Heure locale Paris (0–23)"
       - name: day_of_week
         description: "Jour de la semaine (0=dimanche, 6=samedi)"
-      - name: month
+      - name: month_of_year
         description: "Mois de l'année (1–12)"
       - name: is_weekend
         description: "True si samedi ou dimanche"

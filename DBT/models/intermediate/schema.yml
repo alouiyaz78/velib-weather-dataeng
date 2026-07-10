@@ -8,7 +8,7 @@ models:
       météo les plus proches. Les stations inactives et les snapshots sans
       correspondance météo dans la fenêtre sont exclus.
     columns:
-      - name: stationcode
+      - name: station_code
         description: "Identifiant de la station"
         tests:
           - not_null

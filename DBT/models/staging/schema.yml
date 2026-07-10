@@ -4,7 +4,7 @@ models:
   - name: stg_velib
     description: "Stations Vélib' nettoyées et renommées (schéma bronze -> silver)"
     columns:
-      - name: stationcode
+      - name: station_code
         description: "Identifiant unique de la station"
         tests:
           - not_null
