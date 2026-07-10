@@ -132,7 +132,7 @@ def get_status():
         meteo = query_one("""
             SELECT
                 MAX(ingested_at)  AS last_ingestion,
-                MAX(measured_at)  AS last_measure,
+                MAX(mesured_at)  AS last_measure,
                 COUNT(*)          AS total_rows
             FROM bronze.meteo_paris
         """)
@@ -183,8 +183,8 @@ def meteo_bronze_stats():
         return query_one("""
             SELECT
                 COUNT(*)                                       AS total_rows,
-                MIN(measured_at)                               AS earliest_measure,
-                MAX(measured_at)                               AS latest_measure,
+                MIN(mesured_at)                               AS earliest_measure,
+                MAX(mesured_at)                               AS latest_measure,
                 MIN(ingested_at)                               AS earliest_ingestion,
                 MAX(ingested_at)                               AS latest_ingestion,
                 ROUND(AVG(temperature_2m)::numeric, 2)        AS avg_temperature,
@@ -201,7 +201,7 @@ def meteo_bronze_preview(limit: int = Query(default=10, ge=1, le=100)):
     """Derniers enregistrements de bronze.meteo_paris (dates en heure de Paris)."""
     try:
         rows = query_all(
-            "SELECT * FROM bronze.meteo_paris ORDER BY measured_at DESC LIMIT %s",
+            "SELECT * FROM bronze.meteo_paris ORDER BY mesured_at DESC LIMIT %s",
             (limit,),
         )
         return localize_rows(rows)
@@ -216,7 +216,7 @@ def gold_stats():
         return query_one("""
             SELECT
                 COUNT(*)                                    AS total_rows,
-                COUNT(DISTINCT stationcode)                 AS unique_stations,
+                COUNT(DISTINCT station_code)                AS unique_stations,
                 MIN(duedate)                                AS earliest_record,
                 MAX(duedate)                                AS latest_record,
                 ROUND(AVG(occupancy_rate)::numeric, 2)     AS avg_occupancy_rate,
@@ -284,8 +284,8 @@ def get_stations_occupancy():
     """
     try:
         return query_all("""
-            SELECT DISTINCT ON (g.stationcode)
-                g.stationcode,
+            SELECT DISTINCT ON (g.station_code)
+                g.station_code                              AS stationcode,
                 b.name                                      AS station_name,
                 b.lat,
                 b.lon,
@@ -302,8 +302,8 @@ def get_stations_occupancy():
                 FROM bronze.velib_stations
                 WHERE lat IS NOT NULL AND lon IS NOT NULL
                 ORDER BY stationcode, ingested_at DESC
-            ) b ON g.stationcode = b.stationcode
-            ORDER BY g.stationcode, g.duedate DESC
+            ) b ON g.station_code = b.stationcode
+            ORDER BY g.station_code, g.duedate DESC
         """)
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))
@@ -369,7 +369,7 @@ def get_station_history(
                 ROUND(temperature_2m::numeric, 1)     AS temperature_2m,
                 ROUND(precipitation::numeric, 2)      AS precipitation
             FROM gold.fct_velib_meteo
-            WHERE stationcode = %s
+            WHERE station_code = %s
               {where_extra}
             ORDER BY duedate
             """,
