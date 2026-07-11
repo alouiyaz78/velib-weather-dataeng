@@ -1,2 +1,6 @@
 **/.DS_Store
 .env
+# dbt artefacts générés (pas du code source)
+DBT/target/
+DBT/logs/
+DBT/dbt_packages/
