@@ -124,3 +124,10 @@ Never commit a real .env file. It is excluded via .gitignore.
 The ingestion and dbt images are fully self-contained (code is baked in via COPY at build time).
 
 The Airflow image, however, only contains the base Airflow installation and its Python dependencies. The actual DAG code, ingestion fetchers, and dbt project are mounted from the repository at runtime (see docker-compose.yml volumes), not baked into the image. Cloning this repository is therefore required to run the full stack, even when using the pre-built images.
+
+## Docker Hub Links
+
+- [alouiyaz/velib-ingestion](https://hub.docker.com/r/alouiyaz/velib-ingestion)
+- [alouiyaz/velib-dbt](https://hub.docker.com/r/alouiyaz/velib-dbt)
+- [alouiyaz/velib-dashboard](https://hub.docker.com/r/alouiyaz/velib-dashboard)
+- [alouiyaz/velib-airflow](https://hub.docker.com/r/alouiyaz/velib-airflow)
