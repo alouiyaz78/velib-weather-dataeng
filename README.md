@@ -92,3 +92,35 @@ Open-Meteo: https://open-meteo.com/ (free weather API, no key required)
 Yazid Aloui
 
 github.com/alouiyaz78
+
+## Pre-built Docker Images
+
+Pre-built images are available on Docker Hub, so the project can be run without building from source:
+
+- alouiyaz/velib-ingestion:latest
+- alouiyaz/velib-dbt:latest
+- alouiyaz/velib-dashboard:latest
+- alouiyaz/velib-airflow:latest
+
+Pull them directly with:
+
+docker pull alouiyaz/velib-ingestion:latest
+docker pull alouiyaz/velib-dbt:latest
+docker pull alouiyaz/velib-dashboard:latest
+docker pull alouiyaz/velib-airflow:latest
+
+Note: PostgreSQL uses the official postgres:18.1 image directly (no custom build needed).
+
+## Credentials
+
+No credentials are required to pull the Docker images, as they are public.
+
+To run the stack, copy .env.example to .env and set your own values (PostgreSQL credentials, Airflow admin password, Fernet/Secret keys). No API key is needed for the Velib or Open-Meteo APIs, as both are free and public.
+
+Never commit a real .env file. It is excluded via .gitignore.
+
+## Important Note on Pre-built Images
+
+The ingestion and dbt images are fully self-contained (code is baked in via COPY at build time).
+
+The Airflow image, however, only contains the base Airflow installation and its Python dependencies. The actual DAG code, ingestion fetchers, and dbt project are mounted from the repository at runtime (see docker-compose.yml volumes), not baked into the image. Cloning this repository is therefore required to run the full stack, even when using the pre-built images.
